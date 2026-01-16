@@ -1,0 +1,22 @@
+{
+  "name": "MkDocs Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/beans",
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.makefile-tools",
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    "redhat.vscode-yaml",
+    "eamodio.gitlens",
+    "GitHub.copilot"
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}

@@ -1,0 +1,24 @@
+# Ignore build and Python artifacts
+site/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.venv
+venv/
+*.egg-info/
+.pytest_cache/
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Docker
+*.log
+
+# Jupyter
+.ipynb_checkpoints/

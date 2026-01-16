@@ -1,0 +1,83 @@
+{% extends "main.html" %} {% block tabs %} {{ super() }}
+<style>
+  .md-header {
+    position: initial;
+  }
+  .md-main__inner {
+    margin: 0;
+  }
+  .md-content {
+    display: none;
+  }
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+  .md-tabs {
+    display: none;
+  }
+</style>
+<section class="mdx-container" data-md-component="content">
+  <div class="md-grid md-typeset">
+    <header class="mdx-hero">
+      <img
+        src="{{ config.site_url | url }}/assets/img/favicons/android-chrome-512x512.png"
+        alt=""
+        width="200"
+        height="200"
+        draggable="false"
+      />
+      <p class="mdx-description">Personal Website of Andre_601</p>
+      <a
+        href="https://discord.gg/6dazXp6"
+        title="Join my Discord Server"
+        target="_blank"
+        rel="nofollow"
+        class="md-button md-button__social md-button__social--discord"
+      >
+        <span class="twemoji"> {% include ".icons/simple/discord.svg" %} </span>
+      </a>
+      <a
+        href="https://rvlt.gg/74TpERXA"
+        target="_blank"
+        title="Join my Revolt Server"
+        rel="nofollow"
+        class="md-button md-button__social md-button__social--revolt"
+      >
+        <span class="twemoji">
+          {% include ".icons/simple/revoltdotchat.svg" %}
+        </span>
+      </a>
+      <a
+        href="https://blobfox.coffee/@andre_601"
+        title="Follow me on Mastodon"
+        target="_blank"
+        rel="me"
+        class="md-button md-button__social md-button__social--mastodon"
+      >
+        <span class="twemoji">
+          {% include ".icons/simple/mastodon.svg" %}
+        </span>
+      </a>
+      <a
+        href="https://bsky.app/profile/andre601.ch"
+        title="Follow me on Bluesky"
+        target="_blank"
+        rel="me"
+        class="md-button md-button__social md-button__social--bluesky"
+      >
+        <span class="twemoji"> {% include ".icons/simple/bluesky.svg" %} </span>
+      </a>
+      <p></p>
+    </header>
+    <div class="mdx-description">{{ page.content }}</div>
+  </div>
+</section>
+{% endblock %} {% block content %}{% endblock %} {% block footer %} {{ super()
+}} {% endblock %}

@@ -1,0 +1,6 @@
+# CODEOWNERS
+# Replace placeholders with actual GitHub users/teams.
+# Team format: @org/team-slug
+* @alexanderlewisstevens
+# Add editor team if desired, for example:
+# * @alexanderlewisstevens @org/comp-2300-winter-26
