@@ -13,18 +13,18 @@ if (!prefersReducedMotion) {
         window.requestAnimationFrame(function() {
           var hero = document.querySelector(".mdx-hero");
           if (hero) {
-            var title = hero.querySelector(".mdx-hero__title");
-            var subtitle = hero.querySelector(".mdx-hero__subtitle");
-            var desc = hero.querySelector(".mdx-hero__desc");
-            if (title) {
-              title.style.setProperty("--parallax-title", window.scrollY * 0.2 + "px");
+            var content = hero.querySelector(".mdx-hero__content");
+            if (!content || window.innerWidth < 900) {
+              ticking = false;
+              return;
             }
-            if (subtitle) {
-              subtitle.style.setProperty("--parallax-subtitle", window.scrollY * 0.3 + "px");
-            }
-            if (desc) {
-              desc.style.setProperty("--parallax-desc", window.scrollY * 0.15 + "px");
-            }
+            var maxShift = 24;
+            var heroHeight = hero.offsetHeight || 1;
+            var scroll = Math.min(window.scrollY, heroHeight);
+            var shift = Math.min(scroll * 0.12, maxShift);
+            var fade = Math.max(0.4, 1 - scroll / (heroHeight * 0.8));
+            content.style.setProperty("--parallax-shift", shift + "px");
+            content.style.setProperty("--parallax-alpha", fade.toFixed(2));
           }
           ticking = false;
         });
