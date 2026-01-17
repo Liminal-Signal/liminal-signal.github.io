@@ -3,6 +3,5 @@ mkdocs-material
 mkdocs-awesome-pages-plugin
 pymdown-extensions
 mkdocs-rss-plugin
-mkdocs-blog-plugin
 mkdocs-glightbox
 mkdocs-video
