@@ -1,6 +1,8 @@
 ---
+
 title: Dirk Bosgraaf
 date: 2026-01-13
+publish: true
 tags:
   - student
   - comp-2300

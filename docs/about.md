@@ -1,15 +1,34 @@
-# About Us
+# About the project
 
-We are members of the Computer Science program at the University of Denver interested in Op-Eds. We use this site to publish writing, document lab work, and share project updates.
+Liminal Signal is a course-driven publication space for COMP 2300 (Winter 2026). We use it to publish short essays, lab reflections, and field notes from the semester.
 
-## What you will find here
+## What lives here
 
-- Student Op-Ed drafts and reflections
+- Student writing and reflections
 - Weekly lab notes and progress updates
 - Course announcements and resources
+- Media experiments and prototypes
 
 ## How we work
 
-- Each student owns a blog post file for weekly updates.
+- Each student owns a post and updates it weekly.
 - Editors and instructors review changes through pull requests.
-- Discussions and questions happen in GitHub issues.
+- Questions, feedback, and requests happen in GitHub issues.
+
+## People who have contributed
+
+- Alex Stevens
+- Anisha Arumilli
+- Ben Hubert
+- Benson Huang
+- Charlie Shields
+- Cody Kern
+- Cooper Ade
+- Cooper Livingston
+- Dirk Bosgraaf
+- Gretchen Bayert
+- Makda Gorfu
+- Myles Durant
+- Rhys Jones
+- Samuel Glass
+- Will Zuzic

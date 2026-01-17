@@ -15,6 +15,7 @@ on:
     paths:
       - "docs/**"
       - "mkdocs.yml"
+      - "mkdocs_hooks.py"
       - "theme/**"
     branches:
       - master

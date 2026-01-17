@@ -1,6 +1,8 @@
 ---
+
 title: Welcome and syllabus
 date: 2026-01-05
+publish: true
 tags:
   - course-update
   - comp-2300

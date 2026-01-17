@@ -1,6 +1,8 @@
 ---
+
 title: Ben Hubert
 date: 2026-01-18
+publish: true
 tags:
   - student
   - comp-2300

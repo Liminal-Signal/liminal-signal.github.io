@@ -1,6 +1,8 @@
 ---
+
 title: Samuel Glass
 date: 2026-01-15
+publish: true
 tags:
   - student
   - comp-2300

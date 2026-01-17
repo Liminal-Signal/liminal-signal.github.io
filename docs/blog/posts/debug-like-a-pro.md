@@ -1,6 +1,8 @@
 ---
+
 title: Debugging checklist
 date: 2026-01-22
+publish: true
 tags:
   - course-update
   - lab

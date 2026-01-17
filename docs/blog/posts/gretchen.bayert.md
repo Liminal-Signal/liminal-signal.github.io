@@ -1,6 +1,8 @@
 ---
+
 title: Gretchen Bayert
 date: 2026-01-12
+publish: true
 tags:
   - student
   - comp-2300

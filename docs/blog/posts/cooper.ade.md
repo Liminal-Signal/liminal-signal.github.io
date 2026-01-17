@@ -1,6 +1,8 @@
 ---
+
 title: Cooper Ade
 date: 2026-01-10
+publish: true
 tags:
   - student
   - comp-2300

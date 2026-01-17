@@ -1,0 +1,27 @@
+name: Lint YAML
+
+on:
+  push:
+    paths:
+      - "mkdocs.yml"
+      - ".yamllint.yml"
+  pull_request:
+    paths:
+      - "mkdocs.yml"
+      - ".yamllint.yml"
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - name: Install yamllint
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yamllint
+      - name: Lint mkdocs.yml
+        run: yamllint -c .yamllint.yml mkdocs.yml

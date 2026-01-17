@@ -1,6 +1,8 @@
 ---
+
 title: Python refreshers
 date: 2026-01-20
+publish: true
 tags:
   - course-update
   - lab

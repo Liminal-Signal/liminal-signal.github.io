@@ -59,23 +59,8 @@ copyright: |
 # +--------------------------------------------------------------------------------------------------------+
 docs_dir: docs/
 
-nav:
-  - Home: index.md
-  - Blog: blog/index.md
-  - Tutorials:
-      - Intro and Setup: tutorials/intro.md
-      - Weekly Labs: tutorials/advanced.md
-      - Extras: tutorials/extras.md
-  - Reference:
-      - Course Guide: reference/schema.md
-      - API Reference: reference/api.md
-  - Examples:
-      - Feature Overview: examples/index.md
-      - Admonitions: examples/admonitions.md
-      - Code Highlighting: examples/code-highlighting.md
-      - Interactive Elements: examples/interactive-elements.md
-      - Math Rendering: examples/math.md
-  - About: about.md
+hooks:
+  - mkdocs_hooks.py
 
 
 # +--------------------------------------------------------------------------------------------------------+
@@ -492,7 +477,8 @@ markdown_extensions:
   - pymdownx.tilde:
 plugins:
   - search
-  - blog
+  - blog:
+      folder: blog/posts
   - rss:
       match_path: blog/posts/.*
       image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
@@ -501,3 +487,7 @@ plugins:
       date_from_meta:
         as_creation: date
         as_update: date
+  - mkdocs-video
+  - glightbox:
+      auto_caption: true
+      caption_position: bottom

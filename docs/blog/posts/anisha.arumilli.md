@@ -1,6 +1,8 @@
 ---
+
 title: Anisha Arumilli
 date: 2026-01-11
+publish: true
 tags:
   - student
   - comp-2300

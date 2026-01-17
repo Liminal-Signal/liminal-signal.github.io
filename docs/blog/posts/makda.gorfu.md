@@ -1,6 +1,8 @@
 ---
+
 title: Makda Gorfu
 date: 2026-01-16
+publish: true
 tags:
   - student
   - comp-2300

@@ -1,6 +1,8 @@
 ---
+
 title: "Lab 1: Tooling setup"
 date: 2026-01-07
+publish: true
 tags:
   - course-update
   - lab

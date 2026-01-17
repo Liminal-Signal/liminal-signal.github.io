@@ -1,6 +1,8 @@
 ---
+
 title: Peer review workflow
 date: 2026-01-14
+publish: true
 tags:
   - course-update
   - workflow

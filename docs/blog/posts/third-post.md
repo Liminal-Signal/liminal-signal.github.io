@@ -1,6 +1,8 @@
 ---
+
 title: Op-Ed pitch guidelines
 date: 2026-01-10
+publish: true
 tags:
   - course-update
   - writing

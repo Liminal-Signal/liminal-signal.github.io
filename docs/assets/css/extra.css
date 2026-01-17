@@ -1,20 +1,23 @@
 @import "extensions/tabbed.css";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
 
 :root {
-  --studio-ink: #21303a;
-  --studio-ink-muted: #4b5a66;
-  --studio-paper: #f7f2e8;
-  --studio-paper-strong: #efe4d2;
-  --studio-accent: #e45b4f;
-  --studio-accent-strong: #d94a3c;
-  --studio-accent-soft: #f3a89e;
-  --studio-accent-soft-strong: #ee9b91;
-  --studio-teal: #1f6f78;
-  --studio-shadow: 0 24px 60px rgba(20, 14, 10, 0.18);
-  --studio-shadow-soft: 0 12px 30px rgba(20, 14, 10, 0.12);
-  --studio-border: rgba(29, 26, 23, 0.12);
+  --studio-ink: #1c242b;
+  --studio-ink-muted: #5a636a;
+  --studio-paper: #f1e6d7;
+  --studio-paper-strong: #e6d7c4;
+  --studio-accent: #c45a4a;
+  --studio-accent-strong: #b24b3f;
+  --studio-accent-soft: #e6b1a6;
+  --studio-accent-soft-strong: #db9e93;
+  --studio-teal: #2a6f6b;
+  --studio-shadow: 0 30px 70px rgba(22, 14, 10, 0.22);
+  --studio-shadow-soft: 0 18px 36px rgba(22, 14, 10, 0.16);
+  --studio-border: rgba(29, 26, 23, 0.16);
   --studio-radius: 18px;
+  --studio-font-serif: "Fraunces", "IBM Plex Sans", serif;
+  --studio-font-sans: "IBM Plex Sans", "Fraunces", sans-serif;
+  --studio-font-mono: "IBM Plex Mono", monospace;
 }
 
 [data-md-color-scheme="default"] {
@@ -23,19 +26,24 @@
   --md-primary-bg-color: var(--studio-ink);
   --md-accent-fg-color: var(--studio-accent);
   --md-typeset-a-color: var(--studio-accent);
-  --md-code-bg-color: #f2e7d7;
+  --md-code-bg-color: #efe2cf;
   --md-code-fg-color: #1c1917;
-  --md-footer-bg-color: #f3e8d8;
+  --md-footer-bg-color: #e9dcc9;
   --md-footer-fg-color: var(--studio-ink);
-  --md-footer-bg-color--dark: #eadcc7;
+  --md-footer-bg-color--dark: #e1d1bc;
+  --md-text-font: var(--studio-font-sans);
+  --md-code-font: var(--studio-font-mono);
 }
 
 body {
   background:
-    radial-gradient(circle at 12% 20%, rgba(228, 91, 79, 0.14), transparent 48%),
-    radial-gradient(circle at 85% 10%, rgba(31, 111, 120, 0.12), transparent 45%),
-    var(--studio-paper);
+    radial-gradient(circle at 12% 18%, rgba(196, 90, 74, 0.16), transparent 50%),
+    radial-gradient(circle at 80% 8%, rgba(42, 111, 107, 0.16), transparent 48%),
+    radial-gradient(rgba(26, 24, 22, 0.06) 0.6px, transparent 0.6px),
+    linear-gradient(160deg, #f2e7d8 0%, #eadbca 45%, #efe9de 100%);
+  background-size: auto, auto, 4px 4px, auto;
   color: var(--studio-ink);
+  font-family: var(--studio-font-sans);
 }
 
 .md-main,
@@ -45,13 +53,13 @@ body {
 }
 
 .md-header {
-  background: rgba(247, 242, 232, 0.9);
+  background: rgba(241, 230, 215, 0.92);
   backdrop-filter: blur(12px);
-  box-shadow: 0 12px 24px rgba(15, 10, 5, 0.08);
+  box-shadow: 0 14px 28px rgba(18, 12, 8, 0.16);
 }
 
 .md-tabs {
-  background: rgba(247, 242, 232, 0.85);
+  background: rgba(241, 230, 215, 0.88);
 }
 
 .md-typeset h1,
@@ -60,8 +68,8 @@ body {
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-family: "Source Serif 4", "Manrope", serif;
-  letter-spacing: 0.01em;
+  font-family: var(--studio-font-serif);
+  letter-spacing: 0.015em;
 }
 
 .md-typeset a {
@@ -82,9 +90,9 @@ body {
   max-width: 100vw;
   padding: clamp(4rem, 12vw, 7rem) clamp(1.5rem, 7vw, 6rem) clamp(3rem, 8vw, 6rem);
   background:
-    radial-gradient(circle at 15% 20%, rgba(228, 91, 79, 0.28), transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(31, 111, 120, 0.24), transparent 45%),
-    linear-gradient(140deg, #fff7e8 0%, #f5e7d2 48%, #f0eee9 100%);
+    radial-gradient(circle at 18% 22%, rgba(196, 90, 74, 0.32), transparent 58%),
+    radial-gradient(circle at 78% 0%, rgba(42, 111, 107, 0.28), transparent 46%),
+    linear-gradient(150deg, #f3e7d6 0%, #e9d6c1 50%, #efe8dc 100%);
   overflow: hidden;
   color: var(--studio-ink);
 }
@@ -107,9 +115,9 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(120deg, rgba(29, 26, 23, 0.05), rgba(29, 26, 23, 0) 45%),
-    repeating-linear-gradient(90deg, rgba(29, 26, 23, 0.03), rgba(29, 26, 23, 0.03) 1px, transparent 1px, transparent 12px);
-  opacity: 0.35;
+    linear-gradient(120deg, rgba(29, 26, 23, 0.08), rgba(29, 26, 23, 0) 50%),
+    repeating-linear-gradient(90deg, rgba(29, 26, 23, 0.04), rgba(29, 26, 23, 0.04) 1px, transparent 1px, transparent 10px);
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -136,13 +144,15 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--studio-ink-muted);
+  margin: 0;
 }
 
 .mdx-hero__title {
-  font-family: "Source Serif 4", "Manrope", serif;
+  font-family: var(--studio-font-serif);
   font-size: clamp(2.8rem, 7vw, 4.6rem);
   margin: 0.2rem 0 0.4rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
   transform: translateY(var(--parallax-title, 0px));
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
@@ -161,6 +171,7 @@ body {
   font-size: 1.05rem;
   color: var(--studio-ink-muted);
   max-width: 38rem;
+  margin: 0;
   transform: translateY(var(--parallax-desc, 0px));
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
@@ -231,7 +242,7 @@ body {
 
 .mdx-hero__card {
   width: 100%;
-  background: #fffaf3;
+  background: rgba(255, 249, 241, 0.92);
   border: 1px solid var(--studio-border);
   border-radius: var(--studio-radius);
   padding: 1.6rem;
@@ -280,7 +291,7 @@ body {
 }
 
 .home-section--alt {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(250, 244, 236, 0.75);
   border-top: 1px solid var(--studio-border);
   border-bottom: 1px solid var(--studio-border);
 }
@@ -298,7 +309,7 @@ body {
 }
 
 .home-panel {
-  background: #ffffff;
+  background: rgba(255, 252, 247, 0.95);
   border: 1px solid var(--studio-border);
   border-radius: var(--studio-radius);
   padding: 1.8rem;
@@ -308,7 +319,13 @@ body {
 .home-list {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.home-list li {
+  margin: 0;
 }
 
 .home-list__item {
@@ -318,7 +335,7 @@ body {
   padding: 0.85rem 1rem;
   border-radius: 14px;
   border: 1px solid var(--studio-border);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 251, 244, 0.96);
   text-decoration: none;
   border-bottom: none;
   color: inherit;
@@ -342,7 +359,13 @@ body {
 .home-directory {
   columns: 2 180px;
   column-gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.home-directory li {
+  break-inside: avoid;
 }
 
 .home-directory a {
@@ -382,7 +405,7 @@ body {
 
 .home-card {
   display: block;
-  background: #ffffff;
+  background: rgba(255, 252, 248, 0.96);
   border: 1px solid var(--studio-border);
   border-radius: var(--studio-radius);
   padding: 1.5rem;

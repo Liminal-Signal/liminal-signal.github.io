@@ -1,6 +1,8 @@
 ---
+
 title: Op-Ed inspiration
 date: 2026-01-24
+publish: true
 tags:
   - course-update
   - writing

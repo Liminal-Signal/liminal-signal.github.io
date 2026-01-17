@@ -1,6 +1,8 @@
 ---
+
 title: Markdown writing guide
 date: 2026-01-17
+publish: true
 tags:
   - course-update
   - writing

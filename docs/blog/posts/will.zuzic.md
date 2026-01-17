@@ -1,6 +1,8 @@
 ---
+
 title: Will Zuzic
 date: 2026-01-23
+publish: true
 tags:
   - student
   - comp-2300

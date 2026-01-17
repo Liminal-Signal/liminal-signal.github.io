@@ -1,6 +1,8 @@
 ---
+
 title: Myles Durant
 date: 2026-01-14
+publish: true
 tags:
   - student
   - comp-2300

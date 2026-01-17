@@ -1,6 +1,8 @@
 ---
+
 title: Charlie Shields
 date: 2026-01-22
+publish: true
 tags:
   - student
   - comp-2300
