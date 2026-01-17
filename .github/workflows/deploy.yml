@@ -17,9 +17,11 @@ on:
       - "mkdocs.yml"
       - "mkdocs_hooks.py"
       - "theme/**"
+      - ".github/workflows/deploy.yml"
     branches:
       - master
       - EXPERIMENTAL_BRANCH
+  workflow_dispatch:
     # If your repository would have releases should you uncomment the below lines
     # in order to ignore pushes caused by newly created releases.
     #
