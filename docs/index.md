@@ -51,56 +51,35 @@ hide:
         <li>
           <a class="home-list__item" href="blog/posts/first-post.md">
             <span class="home-list__title">Welcome and syllabus</span>
-            <span class="home-list__meta">Week 1</span>
           </a>
         </li>
         <li>
           <a class="home-list__item" href="blog/posts/second-post.md">
             <span class="home-list__title">Lab 1: Tooling setup</span>
-            <span class="home-list__meta">Week 1</span>
           </a>
         </li>
         <li>
           <a class="home-list__item" href="blog/posts/third-post.md">
             <span class="home-list__title">Op-Ed pitch guidelines</span>
-            <span class="home-list__meta">Week 2</span>
           </a>
         </li>
         <li>
           <a class="home-list__item" href="blog/posts/fourth-post.md">
             <span class="home-list__title">Peer review workflow</span>
-            <span class="home-list__meta">Week 2</span>
           </a>
         </li>
         <li>
           <a class="home-list__item" href="blog/posts/markdown-awesome.md">
             <span class="home-list__title">Markdown writing guide</span>
-            <span class="home-list__meta">Week 3</span>
           </a>
         </li>
       </ul>
       <a class="home-link" href="blog/">Browse all updates</a>
     </div>
     <div class="home-panel">
-      <h2 id="student-directory">Student directory</h2>
-      <p>Jump straight to each student post.</p>
-      <ul class="home-directory" aria-labelledby="student-directory">
-        <li><a href="blog/posts/cooper.ade.md">Cooper Ade</a></li>
-        <li><a href="blog/posts/anisha.arumilli.md">Anisha Arumilli</a></li>
-        <li><a href="blog/posts/gretchen.bayert.md">Gretchen Bayert</a></li>
-        <li><a href="blog/posts/dirk.bosgraaf.md">Dirk Bosgraaf</a></li>
-        <li><a href="blog/posts/myles.durant.md">Myles Durant</a></li>
-        <li><a href="blog/posts/samuel.glass.md">Samuel Glass</a></li>
-        <li><a href="blog/posts/makda.gorfu.md">Makda Gorfu</a></li>
-        <li><a href="blog/posts/benson.huang.md">Benson Huang</a></li>
-        <li><a href="blog/posts/ben.hubert.md">Ben Hubert</a></li>
-        <li><a href="blog/posts/rhys.jones.md">Rhys Jones</a></li>
-        <li><a href="blog/posts/cody.kern.md">Cody Kern</a></li>
-        <li><a href="blog/posts/cooper.livingston.md">Cooper Livingston</a></li>
-        <li><a href="blog/posts/charlie.shields.md">Charlie Shields</a></li>
-        <li><a href="blog/posts/will.zuzic.md">Will Zuzic</a></li>
-      </ul>
-      <a class="home-link" href="blog/">Open the full blog index</a>
+      <h2 id="student-directory">Student work</h2>
+      <p>Student posts live in the COMP-2300 repo and publish when they are marked ready.</p>
+      <a class="home-link" href="blog/">Browse student posts</a>
     </div>
   </div>
 </section>

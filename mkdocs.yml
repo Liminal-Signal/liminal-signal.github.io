@@ -108,7 +108,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   #name: 'material'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The Material theme allows "theme-extsnions", meaning that you can override parts of it by either     |
@@ -123,7 +123,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   custom_dir: 'theme'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "favicon" option allows you to set your own image/icon to use in the browser-tab.                |
@@ -141,7 +141,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   #favicon: 'assets/images/favicon.png'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "palette" section is a Material option and allows you to define specific style options such as   |
@@ -156,7 +156,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   palette:
-  
+
     # +----------------------------------------------------------------------------------------------------+
     # |                                                                                                    |
     # | The "scheme" option is used to define the Color Scheme used by Material.                           |
@@ -223,7 +223,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   #language: 'en'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "direction" option is commonly used together with the "language" option.                         |
@@ -236,7 +236,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   #direction: 'ltr'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "features" option allows you to enable specific features of Material, by adding them to the      |
@@ -260,7 +260,7 @@ theme:
     - header.autohide
     - navigation.expand
     - search.suggest
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "icon" section allows you to define a icon to use for the logo and/or repository.                |
@@ -289,7 +289,7 @@ theme:
   icon:
     logo: 'material/library'
     repo: 'material/library'
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "admonition" option allows you to set a different icon for each admonition type.                 |
@@ -385,10 +385,10 @@ extra:
     - icon: 'fontawesome/solid/rss'
       link: /feed_rss_created.xml
       name: RSS Feed
-  
+
   # social:
   #   - icon: fontawesome/solid/rss
-      
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | Allows you to hide the "Made with Material for MkDocs" text in the footer of the pages by setting    |
@@ -399,7 +399,7 @@ extra:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   generator: true
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "manifest" option allows you to define a .manifest file to use.                                  |
@@ -411,7 +411,7 @@ extra:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   #manifest: manifest.webmanifest
-  
+
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
   # | The "alternate" option can be used to create a selector to switch languages.                         |
