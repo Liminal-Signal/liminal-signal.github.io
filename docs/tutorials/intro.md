@@ -6,7 +6,7 @@ This guide helps you get the repository running and make your first post.
 
 - Clone the repo and install dependencies
 - Run `mkdocs serve` to preview the site
-- Create a branch and edit your blog post file
+- Create a branch and edit your post file
 - Open a pull request for review
 
 ## First post workflow

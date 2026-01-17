@@ -286,8 +286,8 @@ theme:
   # | - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo                |
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
-icon:
-  repo: 'fontawesome/brands/github'
+  icon:
+    repo: 'fontawesome/brands/github'
 
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |

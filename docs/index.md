@@ -14,24 +14,19 @@ hide:
   <div class="mdx-hero__inner">
     <div class="mdx-hero__content">
       <p class="mdx-hero__eyebrow">Liminal Signal</p>
-      <h1 class="mdx-hero__title">Field notes and experiments</h1>
-      <p class="mdx-hero__subtitle">A shared publishing space for the org.</p>
-      <p class="mdx-hero__desc">Everything new lands in the blog first. Contributors publish when a post is marked ready.</p>
+      <h1 class="mdx-hero__title">Liminal Signal</h1>
+      <p class="mdx-hero__subtitle">Shared publishing space.</p>
+      <p class="mdx-hero__desc">Posts appear when they are marked ready.</p>
       <div class="mdx-hero__actions">
-        <a class="mdx-hero__button mdx-hero__button--primary" href="blog/">Read the blog</a>
+        <a class="mdx-hero__button mdx-hero__button--primary" href="blog/">View posts</a>
         <a class="mdx-hero__button mdx-hero__button--ghost" href="tutorials/intro/">Start here</a>
-      </div>
-      <div class="mdx-hero__meta">
-        <span>Many contributors</span>
-        <span>Rolling publications</span>
-        <span>Reviewed via PRs</span>
       </div>
     </div>
     <div class="mdx-hero__panel">
       <div class="mdx-hero__card">
-        <div class="mdx-hero__card-title">Latest updates</div>
-        <p>New announcements and student reflections land in the blog feed.</p>
-        <div class="mdx-hero__card-footer"><a href="blog/">Browse every post</a></div>
+        <div class="mdx-hero__card-title">Latest posts</div>
+        <p>Posts appear when they are ready.</p>
+        <div class="mdx-hero__card-footer"><a href="blog/">All posts</a></div>
       </div>
     </div>
   </div>
@@ -40,14 +35,14 @@ hide:
 <section class="home-section home-section--alt" aria-labelledby="latest-updates">
   <div class="home-section__inner home-split">
     <div class="home-panel">
-      <h2 id="latest-updates">Latest updates</h2>
-      <p>Short announcements, notes, and dispatches live in the blog feed.</p>
-      <a class="home-link" href="blog/">Browse the feed</a>
+      <h2 id="latest-updates">Latest posts</h2>
+      <p>Posts appear when they are ready.</p>
+      <a class="home-link" href="blog/">All posts</a>
     </div>
     <div class="home-panel">
-      <h2 id="contributor-directory">Contributor work</h2>
-      <p>Contributor posts publish when they are marked ready.</p>
-      <a class="home-link" href="blog/">Browse contributor posts</a>
+      <h2 id="contributor-directory">Contributors</h2>
+      <p>Equal voices.</p>
+      <a class="home-link" href="blog/">All posts</a>
     </div>
   </div>
 </section>
@@ -103,9 +98,9 @@ hide:
 <section class="home-section" aria-labelledby="contribute-help">
   <div class="home-section__inner">
     <div class="home-callout">
-      <h2 class="home-callout__title" id="contribute-help">Want to contribute?</h2>
-      <div class="home-callout__text">Open a pull request or drop notes in issues. Editors can review before merge.</div>
-      <a class="home-callout__link" href="blog/">Read the latest updates</a>
+      <h2 class="home-callout__title" id="contribute-help">Contribute</h2>
+      <div class="home-callout__text">Open a pull request or leave a note in issues.</div>
+      <a class="home-callout__link" href="blog/">View posts</a>
     </div>
   </div>
 </section>
