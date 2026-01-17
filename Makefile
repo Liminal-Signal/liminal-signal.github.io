@@ -1,4 +1,4 @@
-.PHONY: serve build gh-deploy docker-build docker-build-only docker-serve docker-build-image help clean lint test docker-shell
+.PHONY: serve build gh-deploy docker-build docker-build-only docker-serve docker-build-image help clean lint test docker-shell submodules
 
 PIP_INSTALL = python3 -m pip install -r requirements.txt
 
@@ -10,6 +10,9 @@ serve:
 build:
 	$(PIP_INSTALL)
 	mkdocs build
+
+submodules: ## Initialize/update blog submodules listed in scripts/submodules.txt
+	./scripts/sync-submodules.sh
 
 gh-deploy:
 	$(PIP_INSTALL)

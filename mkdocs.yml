@@ -60,12 +60,21 @@ copyright: |
 docs_dir: docs/
 
 nav:
-  - Blog: blog/index.md
   - Home: index.md
+  - Blog: blog/index.md
   - Tutorials:
       - Intro and Setup: tutorials/intro.md
       - Weekly Labs: tutorials/advanced.md
-  - Course Guide: reference/schema.md
+      - Extras: tutorials/extras.md
+  - Reference:
+      - Course Guide: reference/schema.md
+      - API Reference: reference/api.md
+  - Examples:
+      - Feature Overview: examples/index.md
+      - Admonitions: examples/admonitions.md
+      - Code Highlighting: examples/code-highlighting.md
+      - Interactive Elements: examples/interactive-elements.md
+      - Math Rendering: examples/math.md
   - About: about.md
 
 
@@ -101,12 +110,6 @@ edit_uri: tree/master/docs # Uncomment to define a different URI/URL for the "ed
 # +--------------------------------------------------------------------------------------------------------+
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - header.autohide
-    - navigation.expand
-    - search.suggest
 
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
@@ -134,7 +137,7 @@ theme:
   # | - https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme                     |
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
-  #custom_dir: 'theme'
+  custom_dir: 'theme'
   
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |
@@ -209,7 +212,7 @@ theme:
   font:
     # text: 'Roboto'
     # code: 'Roboto Mono'
-    text: 'Spline Sans'
+    text: 'Manrope'
     code: 'JetBrains Mono'
     # text: 'Open Sans'
     # code: 'Source Code Pro'
@@ -465,11 +468,6 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
-  - markdown.extensions.admonition:
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.toc:
-      permalink: true
   - pymdownx.b64:
   - pymdownx.betterem:
   - pymdownx.caret:
@@ -498,8 +496,8 @@ plugins:
   - rss:
       match_path: blog/posts/.*
       image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
-      author_email: alexander.lewis.stevens@gmail.com (alex stevens)
       use_git: false
       enabled: true
-      namespaces:
-        atom: http://www.w3.org/2005/Atom
+      date_from_meta:
+        as_creation: date
+        as_update: date

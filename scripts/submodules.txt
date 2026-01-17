@@ -1,0 +1,5 @@
+# Format: <slug> <repo-url>
+# The slug becomes the folder name under docs/blog/posts/.
+# Example:
+# student-a https://github.com/Liminal-Signal/student-a.git
+comp-2300-winter-26 https://github.com/Liminal-Signal/COMP-2300-Winter-26.git

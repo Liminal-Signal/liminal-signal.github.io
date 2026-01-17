@@ -1,13 +1,15 @@
 @import "extensions/tabbed.css";
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap");
 
 :root {
-  --studio-ink: #1d1a17;
-  --studio-ink-muted: #4a423a;
+  --studio-ink: #21303a;
+  --studio-ink-muted: #4b5a66;
   --studio-paper: #f7f2e8;
   --studio-paper-strong: #efe4d2;
   --studio-accent: #e45b4f;
   --studio-accent-strong: #d94a3c;
+  --studio-accent-soft: #f3a89e;
+  --studio-accent-soft-strong: #ee9b91;
   --studio-teal: #1f6f78;
   --studio-shadow: 0 24px 60px rgba(20, 14, 10, 0.18);
   --studio-shadow-soft: 0 12px 30px rgba(20, 14, 10, 0.12);
@@ -17,15 +19,15 @@
 
 [data-md-color-scheme="default"] {
   --md-default-bg-color: var(--studio-paper);
-  --md-primary-fg-color: var(--studio-ink);
-  --md-primary-bg-color: #fff8ee;
+  --md-primary-fg-color: #fff8ee;
+  --md-primary-bg-color: var(--studio-ink);
   --md-accent-fg-color: var(--studio-accent);
   --md-typeset-a-color: var(--studio-accent);
   --md-code-bg-color: #f2e7d7;
   --md-code-fg-color: #1c1917;
-  --md-footer-bg-color: #201c18;
-  --md-footer-fg-color: #f7f2e8;
-  --md-footer-bg-color--dark: #15110f;
+  --md-footer-bg-color: #f3e8d8;
+  --md-footer-fg-color: var(--studio-ink);
+  --md-footer-bg-color--dark: #eadcc7;
 }
 
 body {
@@ -58,7 +60,7 @@ body {
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-family: "Fraunces", "Spline Sans", serif;
+  font-family: "Source Serif 4", "Manrope", serif;
   letter-spacing: 0.01em;
 }
 
@@ -137,7 +139,7 @@ body {
 }
 
 .mdx-hero__title {
-  font-family: "Fraunces", "Spline Sans", serif;
+  font-family: "Source Serif 4", "Manrope", serif;
   font-size: clamp(2.8rem, 7vw, 4.6rem);
   margin: 0.2rem 0 0.4rem;
   letter-spacing: 0.01em;
@@ -179,8 +181,8 @@ body {
   border-radius: 999px;
   font-weight: 600;
   border: 1px solid transparent;
-  background: var(--studio-accent);
-  color: #fff;
+  background: var(--studio-accent-soft);
+  color: var(--studio-ink);
   text-decoration: none;
   border-bottom: none;
   box-shadow: var(--studio-shadow-soft);
@@ -190,7 +192,7 @@ body {
 .mdx-hero__button:hover {
   transform: translateY(-2px);
   box-shadow: var(--studio-shadow);
-  background: var(--studio-accent-strong);
+  background: var(--studio-accent-soft-strong);
 }
 
 .mdx-hero__button--ghost {

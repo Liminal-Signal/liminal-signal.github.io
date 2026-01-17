@@ -1,5 +1,5 @@
 ---
-title: Lab 1: Tooling setup
+title: "Lab 1: Tooling setup"
 date: 2026-01-07
 tags:
   - course-update
