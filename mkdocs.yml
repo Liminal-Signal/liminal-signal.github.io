@@ -27,10 +27,10 @@
 # | - https://www.mkdocs.org/user-guide/configuration/#site_url                                            |
 # |                                                                                                        |
 # +--------------------------------------------------------------------------------------------------------+
-site_name: COMP 2300 Winter 2026
-site_description: 'Course hub for COMP 2300: labs, projects, and weekly notes'
+site_name: Liminal Signal
+site_description: 'Liminal Signal: a shared publishing space for experiments, notes, and field work'
 site_author: 'alexander.lewis.stevens@gmail.com'
-site_url: 'https://alexanderlewisstevens.github.io/' # Uncomment to set a canonical URL
+site_url: 'https://liminal-signal.github.io/'
 
 # +--------------------------------------------------------------------------------------------------------+
 # |                                                                                                        |
@@ -78,8 +78,8 @@ hooks:
 # | - https://www.mkdocs.org/user-guide/configuration/#edit_uri                                            |
 # |                                                                                                        |
 # +--------------------------------------------------------------------------------------------------------+
-repo_name: alexanderlewisstevens.github.io
-repo_url: https://github.com/alexanderlewisstevens/alexanderlewisstevens.github.io
+repo_name: Liminal-Signal
+repo_url: https://github.com/Liminal-Signal/
 
 edit_uri: tree/master/docs # Uncomment to define a different URI/URL for the "edit" option
 
@@ -286,9 +286,8 @@ theme:
   # | - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo                |
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
-  icon:
-    logo: 'material/library'
-    repo: 'material/library'
+icon:
+  repo: 'fontawesome/brands/github'
 
   # +------------------------------------------------------------------------------------------------------+
   # |                                                                                                      |

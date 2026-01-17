@@ -1,18 +1,18 @@
 # About the project
 
-Liminal Signal is a course-driven publication space for COMP 2300 (Winter 2026). We use it to publish short essays, lab reflections, and field notes from the semester.
+Liminal Signal is a shared publication space for the org. We publish short essays, reflections, and field notes from across projects.
 
 ## What lives here
 
-- Student writing and reflections
-- Weekly lab notes and progress updates
-- Course announcements and resources
+- Contributor writing and reflections
+- Project notes and progress updates
+- Announcements and resources
 - Media experiments and prototypes
 
 ## How we work
 
-- Each student owns a post and updates it weekly.
-- Editors and instructors review changes through pull requests.
+- Each contributor owns a post and updates it as needed.
+- Editors review changes through pull requests.
 - Questions, feedback, and requests happen in GitHub issues.
 
 ## People who have contributed

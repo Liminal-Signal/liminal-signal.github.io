@@ -13,80 +13,48 @@ hide:
 <div class="mdx-hero">
   <div class="mdx-hero__inner">
     <div class="mdx-hero__content">
-      <p class="mdx-hero__eyebrow">COMP 2300 / Winter 2026</p>
-      <h1 class="mdx-hero__title">The Course Blog</h1>
-      <p class="mdx-hero__subtitle">Weekly announcements plus student reflections.</p>
-      <p class="mdx-hero__desc">Everything new lands in the blog first. Use it for check-ins, write-ups, and progress updates.</p>
+      <p class="mdx-hero__eyebrow">Liminal Signal</p>
+      <h1 class="mdx-hero__title">Field notes and experiments</h1>
+      <p class="mdx-hero__subtitle">A shared publishing space for the org.</p>
+      <p class="mdx-hero__desc">Everything new lands in the blog first. Contributors publish when a post is marked ready.</p>
       <div class="mdx-hero__actions">
         <a class="mdx-hero__button mdx-hero__button--primary" href="blog/">Read the blog</a>
         <a class="mdx-hero__button mdx-hero__button--ghost" href="tutorials/intro/">Start here</a>
       </div>
       <div class="mdx-hero__meta">
-        <span>14 student posts</span>
-        <span>Weekly announcements</span>
+        <span>Many contributors</span>
+        <span>Rolling publications</span>
         <span>Reviewed via PRs</span>
       </div>
     </div>
     <div class="mdx-hero__panel">
       <div class="mdx-hero__card">
         <div class="mdx-hero__card-title">Latest updates</div>
-        <ul class="mdx-hero__card-list">
-          <li><a href="blog/posts/first-post.md">Welcome and syllabus</a></li>
-          <li><a href="blog/posts/second-post.md">Lab 1: Tooling setup</a></li>
-          <li><a href="blog/posts/third-post.md">Op-Ed pitch guidelines</a></li>
-          <li><a href="blog/posts/fourth-post.md">Peer review workflow</a></li>
-        </ul>
+        <p>New announcements and student reflections land in the blog feed.</p>
         <div class="mdx-hero__card-footer"><a href="blog/">Browse every post</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<section class="home-section home-section--alt" aria-labelledby="course-updates">
+<section class="home-section home-section--alt" aria-labelledby="latest-updates">
   <div class="home-section__inner home-split">
     <div class="home-panel">
-      <h2 id="course-updates">Latest course updates</h2>
-      <p>Short, practical updates for labs and writing assignments.</p>
-      <ul class="home-list">
-        <li>
-          <a class="home-list__item" href="blog/posts/first-post.md">
-            <span class="home-list__title">Welcome and syllabus</span>
-          </a>
-        </li>
-        <li>
-          <a class="home-list__item" href="blog/posts/second-post.md">
-            <span class="home-list__title">Lab 1: Tooling setup</span>
-          </a>
-        </li>
-        <li>
-          <a class="home-list__item" href="blog/posts/third-post.md">
-            <span class="home-list__title">Op-Ed pitch guidelines</span>
-          </a>
-        </li>
-        <li>
-          <a class="home-list__item" href="blog/posts/fourth-post.md">
-            <span class="home-list__title">Peer review workflow</span>
-          </a>
-        </li>
-        <li>
-          <a class="home-list__item" href="blog/posts/markdown-awesome.md">
-            <span class="home-list__title">Markdown writing guide</span>
-          </a>
-        </li>
-      </ul>
-      <a class="home-link" href="blog/">Browse all updates</a>
+      <h2 id="latest-updates">Latest updates</h2>
+      <p>Short announcements, notes, and dispatches live in the blog feed.</p>
+      <a class="home-link" href="blog/">Browse the feed</a>
     </div>
     <div class="home-panel">
-      <h2 id="student-directory">Student work</h2>
-      <p>Student posts live in the COMP-2300 repo and publish when they are marked ready.</p>
-      <a class="home-link" href="blog/">Browse student posts</a>
+      <h2 id="contributor-directory">Contributor work</h2>
+      <p>Contributor posts publish when they are marked ready.</p>
+      <a class="home-link" href="blog/">Browse contributor posts</a>
     </div>
   </div>
 </section>
 
-<section class="home-section" aria-labelledby="course-essentials">
+<section class="home-section" aria-labelledby="essentials">
   <div class="home-section__inner">
-    <h2 id="course-essentials">Course essentials</h2>
+    <h2 id="essentials">Essentials</h2>
     <div class="home-grid">
       <a class="home-card" href="tutorials/intro/">
         <div class="home-card__title">Intro and setup</div>
@@ -101,16 +69,16 @@ hide:
         <div class="home-card__text">Policies, grading, and how submissions work.</div>
       </a>
       <a class="home-card" href="about/">
-        <div class="home-card__title">Course team</div>
-        <div class="home-card__text">Instructor, editors, and contact details.</div>
+        <div class="home-card__title">Team</div>
+        <div class="home-card__text">Contributors, editors, and contact details.</div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="home-section" aria-labelledby="course-flow">
+<section class="home-section" aria-labelledby="publishing-flow">
   <div class="home-section__inner">
-    <h2 id="course-flow">How the course runs</h2>
+    <h2 id="publishing-flow">How we publish</h2>
     <div class="home-pill-grid">
       <div class="home-pill">
         <div class="home-pill__title">Prepare</div>
@@ -132,11 +100,11 @@ hide:
   </div>
 </section>
 
-<section class="home-section" aria-labelledby="course-help">
+<section class="home-section" aria-labelledby="contribute-help">
   <div class="home-section__inner">
     <div class="home-callout">
-      <h2 class="home-callout__title" id="course-help">Need help or feedback?</h2>
-      <div class="home-callout__text">Use GitHub issues or add comments directly in pull requests. Editors and TAs can review before merge.</div>
+      <h2 class="home-callout__title" id="contribute-help">Want to contribute?</h2>
+      <div class="home-callout__text">Open a pull request or drop notes in issues. Editors can review before merge.</div>
       <a class="home-callout__link" href="blog/">Read the latest updates</a>
     </div>
   </div>
