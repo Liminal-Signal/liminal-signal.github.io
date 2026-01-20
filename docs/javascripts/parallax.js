@@ -4,35 +4,59 @@ if (window.matchMedia) {
 }
 
 if (!prefersReducedMotion) {
-  // Subtle parallax scroll effect for hero text blocks only
-  var ticking = false;
+  // Subtle parallax + scroll lag for a softer, delayed feel.
+  var scrollTarget = window.scrollY || 0;
+  var scrollCurrent = scrollTarget;
+  var scrollAnimating = false;
+
+  function updateHero(scrollValue) {
+    var hero = document.querySelector(".mdx-hero");
+    if (!hero) return;
+    var content = hero.querySelector(".mdx-hero__content");
+    if (!content || window.innerWidth < 900) return;
+    var maxShift = 24;
+    var heroHeight = hero.offsetHeight || 1;
+    var scroll = Math.min(scrollValue, heroHeight);
+    var shift = Math.min(scroll * 0.12, maxShift);
+    var fade = Math.max(0.4, 1 - scroll / (heroHeight * 0.8));
+    content.style.setProperty("--parallax-shift", shift + "px");
+    content.style.setProperty("--parallax-alpha", fade.toFixed(2));
+  }
+
+  function tickScroll() {
+    var delta = scrollTarget - scrollCurrent;
+    var step = delta * 0.12;
+    var maxStep = 32;
+    if (step > maxStep) step = maxStep;
+    if (step < -maxStep) step = -maxStep;
+    scrollCurrent += step;
+    var lag = scrollCurrent - scrollTarget;
+    if (Math.abs(lag) < 0.1) {
+      lag = 0;
+    }
+    document.documentElement.style.setProperty("--scroll-lag", lag.toFixed(2) + "px");
+    updateHero(scrollCurrent);
+
+    if (Math.abs(scrollTarget - scrollCurrent) > 0.2) {
+      window.requestAnimationFrame(tickScroll);
+    } else {
+      scrollAnimating = false;
+    }
+  }
+
   window.addEventListener(
     "scroll",
     function() {
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          var hero = document.querySelector(".mdx-hero");
-          if (hero) {
-            var content = hero.querySelector(".mdx-hero__content");
-            if (!content || window.innerWidth < 900) {
-              ticking = false;
-              return;
-            }
-            var maxShift = 24;
-            var heroHeight = hero.offsetHeight || 1;
-            var scroll = Math.min(window.scrollY, heroHeight);
-            var shift = Math.min(scroll * 0.12, maxShift);
-            var fade = Math.max(0.4, 1 - scroll / (heroHeight * 0.8));
-            content.style.setProperty("--parallax-shift", shift + "px");
-            content.style.setProperty("--parallax-alpha", fade.toFixed(2));
-          }
-          ticking = false;
-        });
-        ticking = true;
+      scrollTarget = window.scrollY || 0;
+      if (!scrollAnimating) {
+        scrollAnimating = true;
+        window.requestAnimationFrame(tickScroll);
       }
     },
     { passive: true }
   );
+
+  updateHero(scrollCurrent);
 }
 
 // Fade in hero, main content, cards, and media on page load and on navigation

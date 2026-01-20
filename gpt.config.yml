@@ -1,0 +1,83 @@
+project:
+  name: Liminal Signal
+  summary: Calm, minimal publishing site for COMP-2300 Winter 2026.
+  goals:
+    - Keep the site visually striking but low-noise.
+    - Prioritize readability and minimal text.
+    - Maintain a cohesive look across all pages.
+
+stack:
+  site_generator: MkDocs
+  theme: Material for MkDocs
+  language: Python
+  plugins:
+    - blog
+    - rss
+    - mkdocs-video
+    - glightbox
+
+paths:
+  docs_dir: docs/
+  theme_overrides: theme/
+  css_main: docs/assets/css/extra.css
+  js_main: docs/javascripts/
+  images: docs/assets/images/
+  blog_posts: docs/blog/posts/
+  mixed_media_page: docs/mixed-media.md
+  build_output: site/
+
+commands:
+  setup: make venv
+  serve: make serve
+  build: make build
+  submodules: make submodules
+  docker_serve: make docker-serve
+  docker_build: make docker-build
+
+content_rules:
+  blog_publish_flag: "publish: true"
+  pseudonym_meta_keys:
+    - pseudonym
+    - alias
+    - byline
+  draft_control: mkdocs_hooks.py sets blog posts to draft unless publish is true.
+  generated_site_note: Do not edit site/ directly.
+  submodule_note: docs/blog/posts/comp-2300-winter-26 is a submodule, edit with care.
+
+design_system:
+  typography:
+    serif: Fraunces
+    sans: IBM Plex Sans
+    mono: IBM Plex Mono
+  navigation:
+    tabs_style: Pill tabs with uppercase labels.
+    toc: Disabled globally via theme/partials/toc.html.
+  background:
+    gradient: WebGL gradient + spotlight overlay, fixed on all pages.
+  tone:
+    - Minimal text
+    - Neutral palette
+    - Soft shadows
+
+media_policy:
+  ok_in_repo:
+    - images
+    - svg
+    - small gifs
+    - short audio
+  use_external_hosting_for:
+    - video
+    - large assets
+    - anything near GitHub size limits
+
+docker:
+  dockerfile: .devcontainer/Dockerfile
+  workdir: /beans
+  posts_mount_env: POSTS_DIR
+  posts_mount_target: /beans/docs/blog/posts/comp-2300-winter-26
+  notes:
+    - Set POSTS_DIR to a separate local clone of COMP-2300-Winter-26 to override the submodule in Docker.
+
+notes:
+  - Global gradient markup lives in theme/partials/content.html.
+  - Mixed media layout styles live in docs/assets/css/extra.css.

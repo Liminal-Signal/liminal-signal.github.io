@@ -19,7 +19,7 @@ Liminal Signal is a shared publication space for the org. We publish short essay
 
 - Alex Stevens
 - Anisha Arumilli
-- Ben Hubert
+- Elle Hubert
 - Benson Huang
 - Charlie Shields
 - Cody Kern
@@ -30,5 +30,5 @@ Liminal Signal is a shared publication space for the org. We publish short essay
 - Makda Gorfu
 - Myles Durant
 - Rhys Jones
-- Samuel Glass
+- Sam Glass
 - Will Zuzic

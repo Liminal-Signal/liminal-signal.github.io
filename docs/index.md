@@ -13,20 +13,50 @@ hide:
 <div class="mdx-hero">
   <div class="mdx-hero__inner">
     <div class="mdx-hero__content">
-      <p class="mdx-hero__eyebrow">Liminal Signal</p>
-      <h1 class="mdx-hero__title">Liminal Signal</h1>
-      <p class="mdx-hero__subtitle">Shared publishing space.</p>
-      <p class="mdx-hero__desc">Posts appear when they are marked ready.</p>
+      <p class="mdx-hero__eyebrow">Shared publishing space</p>
+      <h1 class="mdx-hero__title">Liminal <span class="mdx-hero__title-mark">Signal</span></h1>
+      <p class="mdx-hero__subtitle">Short essays, reflections, and field notes from across the org.</p>
+      <p class="mdx-hero__desc">Posts publish when they are marked ready, keeping the feed calm and deliberate.</p>
       <div class="mdx-hero__actions">
         <a class="mdx-hero__button mdx-hero__button--primary" href="blog/">View posts</a>
         <a class="mdx-hero__button mdx-hero__button--ghost" href="tutorials/intro/">Start here</a>
       </div>
+      <div class="mdx-hero__meta">
+        <span>Contributor owned</span>
+        <span>Editor reviewed</span>
+        <span>Markdown first</span>
+      </div>
     </div>
     <div class="mdx-hero__panel">
-      <div class="mdx-hero__card">
-        <div class="mdx-hero__card-title">Latest posts</div>
-        <p>Posts appear when they are ready.</p>
-        <div class="mdx-hero__card-footer"><a href="blog/">All posts</a></div>
+      <div class="mdx-hero__card-stack">
+        <div class="mdx-hero__card">
+          <div class="mdx-hero__card-kicker">Signal board</div>
+          <div class="mdx-hero__card-title">What is moving</div>
+          <div class="mdx-hero__signal-list">
+            <div class="mdx-hero__signal-item">
+              <span class="mdx-hero__signal-tag mdx-hero__signal-tag--draft">Drafts</span>
+              <div>
+                <div class="mdx-hero__signal-title">Field notes in progress</div>
+                <div class="mdx-hero__signal-meta">Working sessions and rough sketches</div>
+              </div>
+            </div>
+            <div class="mdx-hero__signal-item">
+              <span class="mdx-hero__signal-tag mdx-hero__signal-tag--review">Review</span>
+              <div>
+                <div class="mdx-hero__signal-title">Peer edits and revisions</div>
+                <div class="mdx-hero__signal-meta">Feedback cycles before release</div>
+              </div>
+            </div>
+            <div class="mdx-hero__signal-item">
+              <span class="mdx-hero__signal-tag mdx-hero__signal-tag--ready">Ready</span>
+              <div>
+                <div class="mdx-hero__signal-title">Published dispatches</div>
+                <div class="mdx-hero__signal-meta">Short essays and experiment recaps</div>
+              </div>
+            </div>
+          </div>
+          <div class="mdx-hero__card-footer"><a href="blog/">All posts</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -66,6 +96,10 @@ hide:
       <a class="home-card" href="about/">
         <div class="home-card__title">Team</div>
         <div class="home-card__text">Contributors, editors, and contact details.</div>
+      </a>
+      <a class="home-card" href="mixed-media/">
+        <div class="home-card__title">Mixed media</div>
+        <div class="home-card__text">Photo dumps, sketches, and fragments.</div>
       </a>
     </div>
   </div>

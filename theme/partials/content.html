@@ -20,6 +20,39 @@
   IN THE SOFTWARE.
 -->
 
+{% set is_homepage = page and page.is_homepage %}
+
+<canvas
+  class="mdx-hero__gradient"
+  id="c"
+  data-gradient="wrapper"
+  data-multx="1.4"
+  data-multy="1.15"
+  data-hue="2"
+  data-brightness="0.95"
+  data-mouse="0"
+  data-scale="1.05"
+  data-scale2="0.9"
+  data-noise="0.9"
+  data-time="0.12"
+  data-bw="0.35"
+  data-bw2="0.5"
+  data-red="0.72"
+  data-green="0.70"
+  data-blue="0.68"
+  data-red2="0.64"
+  data-green2="0.67"
+  data-blue2="0.70"
+  aria-hidden="true"
+></canvas>
+
+<div class="mdx-spotlight" aria-hidden="true"></div>
+<div class="mdx-cursor-glow" aria-hidden="true"></div>
+
+{% if not is_homepage %}
+<div class="mdx-page-skin">
+{% endif %}
+
 <!-- Tags -->
 {% if "material/tags" in config.plugins %} {% include "partials/tags.html" %} {%
 endif %}
@@ -31,12 +64,40 @@ endif %}
   Hack: check whether the content contains a h1 headline. If it doesn't, the
   page title (or respectively site name) is used as the main headline.
 -->
-{% if "\x3ch1" not in page.content %}
-<h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% set pseudonym = None %}
+{% if page.meta %}
+  {% if page.meta.pseudonym %}
+    {% set pseudonym = page.meta.pseudonym %}
+  {% elif page.meta.alias %}
+    {% set pseudonym = page.meta.alias %}
+  {% elif page.meta.byline %}
+    {% set pseudonym = page.meta.byline %}
+  {% endif %}
 {% endif %}
 
-<!-- Page content -->
-{{ page.content }}
+{% if pseudonym %}
+<div class="mdx-content mdx-content--alias">
+  {% if "\x3ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+  {% endif %}
+  {% if pseudonym is string %}
+    {% set pseudonym_label = pseudonym %}
+  {% else %}
+    {% set pseudonym_label = pseudonym | join(", ") %}
+  {% endif %}
+  <p class="md-author__alias">Pseudonym: {{ pseudonym_label }}</p>
+
+  <!-- Page content -->
+  {{ page.content }}
+</div>
+{% else %}
+  {% if "\x3ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+  {% endif %}
+
+  <!-- Page content -->
+  {{ page.content }}
+{% endif %}
 
 <!-- Was this page helpful? -->
 {% include "partials/feedback.html" %}
@@ -48,3 +109,7 @@ endif %}
 {% if page.meta and ( page.meta.git_revision_date_localized or
 page.meta.revision_date ) %} {% include "partials/source-file.html" %} {% endif
 %}
+
+{% if not is_homepage %}
+</div>
+{% endif %}
