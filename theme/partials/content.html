@@ -22,33 +22,6 @@
 
 {% set is_homepage = page and page.is_homepage %}
 
-<canvas
-  class="mdx-hero__gradient"
-  id="c"
-  data-gradient="wrapper"
-  data-multx="1.4"
-  data-multy="1.15"
-  data-hue="2"
-  data-brightness="0.95"
-  data-mouse="0"
-  data-scale="1.05"
-  data-scale2="0.9"
-  data-noise="0.9"
-  data-time="0.12"
-  data-bw="0.35"
-  data-bw2="0.5"
-  data-red="0.72"
-  data-green="0.70"
-  data-blue="0.68"
-  data-red2="0.64"
-  data-green2="0.67"
-  data-blue2="0.70"
-  aria-hidden="true"
-></canvas>
-
-<div class="mdx-spotlight" aria-hidden="true"></div>
-<div class="mdx-cursor-glow" aria-hidden="true"></div>
-
 {% if not is_homepage %}
 <div class="mdx-page-skin">
 {% endif %}

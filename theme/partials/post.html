@@ -17,9 +17,6 @@
       <ul class="md-meta__list">
         <!-- Post date -->
         <li class="md-meta__item">
-          <span class="twemoji">
-            {% include ".icons/octicons/calendar-24.svg" %}
-          </span>
           <time datetime="{{ post.config.date.created }}">
             {{- post.config.date.created | date -}}
           </time>
@@ -41,9 +38,6 @@
         <!-- Post readtime -->
         {% if post.config.readtime %} {% set time = post.config.readtime %}
         <li class="md-meta__item">
-          <span class="twemoji">
-            {% include ".icons/octicons/stopwatch-24.svg" %}
-          </span>
           {% if time == 1 %} {{ lang.t("readtime.one") }} {% else %} {{
           lang.t("readtime.other") | replace("#", time) }} {% endif %}
         </li>

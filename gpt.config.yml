@@ -35,7 +35,7 @@ commands:
   docker_build: make docker-build
 
 content_rules:
-  blog_publish_flag: "publish: true"
+  blog_publish_flag: "publish: false"
   pseudonym_meta_keys:
     - pseudonym
     - alias

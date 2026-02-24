@@ -53,7 +53,6 @@ config.extra.mastodon.host %}
                 <ul class="md-nav__list">
                   <li class="md-nav__item">
                     <div class="md-nav__link">
-                      {% include ".icons/material/calendar.svg" %}
                       <time
                         datetime="{{ page.config.date.created }}"
                         class="md-ellipsis"
@@ -65,7 +64,6 @@ config.extra.mastodon.host %}
                   {% if page.config.date.updated %}
                   <li class="md-nav__item">
                     <div class="md-nav__link">
-                      {% include ".icons/material/calendar-clock.svg" %}
                       <time
                         datetime="{{ page.config.date.updated }}"
                         class="md-ellipsis"
@@ -92,7 +90,6 @@ config.extra.mastodon.host %}
                   page.config.readtime %}
                   <li class="md-nav__item">
                     <div class="md-nav__link">
-                      {% include ".icons/material/clock-outline.svg" %}
                       <span class="md-ellipsis">
                         {% if time == 1 %} {{ lang.t("readtime.one") }} {% else
                         %} {{ lang.t("readtime.other") | replace("#", time) }}

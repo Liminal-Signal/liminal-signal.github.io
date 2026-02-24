@@ -4,4 +4,3 @@ mkdocs-awesome-pages-plugin
 pymdown-extensions
 mkdocs-rss-plugin
 mkdocs-glightbox
-mkdocs-video

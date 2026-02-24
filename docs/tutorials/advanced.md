@@ -1,4 +1,4 @@
-# Weekly Labs
+# Labs
 
 Labs focus on building, documenting, and reviewing work as a team.
 
