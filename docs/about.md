@@ -7,4 +7,3 @@ Liminal Signal is a shared publication space. We publish short essays, reflectio
 - Each contributor owns a post and updates it as needed.
 - Editors review changes through pull requests.
 - Questions, feedback, and requests happen in GitHub issues.
-
