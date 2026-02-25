@@ -1,5 +1,5 @@
 ---
-title: Home
+title: About
 ---
 
 # About the project
