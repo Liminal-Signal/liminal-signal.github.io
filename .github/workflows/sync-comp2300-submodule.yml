@@ -1,0 +1,66 @@
+name: Sync COMP-2300 Submodule
+
+on:
+  repository_dispatch:
+    types:
+      - comp2300-updated
+  workflow_dispatch:
+
+concurrency:
+  group: sync-comp2300-submodule
+  cancel-in-progress: true
+
+jobs:
+  sync-comp2300:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout liminal-signal
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Choose tracked branch
+        id: choose_branch
+        run: |
+          set -euo pipefail
+          repo_url="$(git config -f .gitmodules --get submodule.docs/blog/posts/comp-2300-winter-26.url)"
+          if git ls-remote --exit-code --heads "$repo_url" main >/dev/null 2>&1; then
+            echo "branch=main" >> "$GITHUB_OUTPUT"
+          elif git ls-remote --exit-code --heads "$repo_url" master >/dev/null 2>&1; then
+            echo "branch=master" >> "$GITHUB_OUTPUT"
+          else
+            echo "Could not find main/master in $repo_url" >&2
+            exit 1
+          fi
+
+      - name: Update submodule to latest commit
+        run: |
+          set -euo pipefail
+          branch="${{ steps.choose_branch.outputs.branch }}"
+          git submodule sync --recursive
+          git submodule update --init --recursive
+          git -C docs/blog/posts/comp-2300-winter-26 fetch origin "$branch"
+          git -C docs/blog/posts/comp-2300-winter-26 checkout --detach "origin/$branch"
+
+      - name: Commit submodule pointer
+        id: commit_pointer
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/blog/posts/comp-2300-winter-26; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add docs/blog/posts/comp-2300-winter-26
+          git commit -m "chore: sync COMP-2300-Winter-26 submodule"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Push pointer update
+        if: steps.commit_pointer.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          default_branch="$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
+          git push origin "HEAD:${default_branch}"

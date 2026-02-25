@@ -14,12 +14,16 @@ on:
   push:
     paths:
       - "docs/**"
+      - ".gitmodules"
       - "mkdocs.yml"
       - "mkdocs_hooks.py"
+      - "scripts/submodules.txt"
+      - "scripts/sync-submodules.sh"
       - "theme/**"
       - ".github/workflows/deploy.yml"
     branches:
       - master
+      - main
       - EXPERIMENTAL_BRANCH
   workflow_dispatch:
     # If your repository would have releases should you uncomment the below lines
