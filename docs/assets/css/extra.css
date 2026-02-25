@@ -64,16 +64,6 @@ body {
   background: transparent;
 }
 
-.md-sidebar--primary,
-.md-sidebar--secondary,
-.md-sidebar--post {
-  display: none;
-}
-
-.md-header__button[for="__drawer"] {
-  display: none;
-}
-
 @media screen and (min-width: 60em) {
   .md-main__inner {
     margin-left: 0;
