@@ -65,6 +65,12 @@ body {
 }
 
 @media screen and (min-width: 60em) {
+  .md-sidebar--primary,
+  .md-sidebar--secondary,
+  .md-sidebar--post {
+    display: none;
+  }
+
   .md-main__inner {
     margin-left: 0;
     grid-template-columns: 1fr;
@@ -80,6 +86,51 @@ body {
   background: rgba(241, 230, 215, 0.36);
   backdrop-filter: blur(12px);
   box-shadow: 0 14px 28px rgba(18, 12, 8, 0.16);
+}
+
+.md-search__form {
+  border-radius: 999px;
+  border: 1px solid rgba(28, 36, 43, 0.2);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 8px 20px rgba(12, 16, 20, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.md-search__form:focus-within {
+  border-color: rgba(196, 90, 74, 0.62);
+  box-shadow: 0 0 0 3px rgba(196, 90, 74, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.md-search__input {
+  color: var(--studio-ink);
+  font-family: var(--studio-font-sans);
+}
+
+.md-search__input::placeholder {
+  color: rgba(28, 36, 43, 0.66);
+}
+
+.md-search__icon {
+  color: rgba(28, 36, 43, 0.72);
+}
+
+.md-search__output {
+  margin-top: 0.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(28, 36, 43, 0.14);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 34px rgba(12, 16, 20, 0.18);
+}
+
+.md-search-result__meta {
+  color: var(--studio-ink-muted);
+}
+
+@media (max-width: 48em) {
+  .md-search__form {
+    border-radius: 14px;
+  }
 }
 
 .md-tabs {
@@ -121,6 +172,18 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+@media (max-width: 48em) {
+  .md-header__source .md-source__repository,
+  .md-nav__source .md-source__repository {
+    display: none;
+  }
+
+  .md-header__source .md-source,
+  .md-nav__source .md-source {
+    padding-inline: 0.35rem;
+  }
 }
 
 .md-nav__title {
@@ -174,6 +237,16 @@ body.mdx-cursor-hidden * {
 .md-typeset a:hover {
   color: var(--studio-accent-strong);
   text-decoration-color: rgba(196, 90, 74, 0.55);
+}
+
+.md-post__action .md-button {
+  color: #2b241d;
+  border-color: rgba(43, 36, 29, 0.34);
+}
+
+.md-post__action .md-button:hover {
+  color: #1f1914;
+  border-color: rgba(31, 25, 20, 0.42);
 }
 
 .md-typeset hr {

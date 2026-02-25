@@ -44,9 +44,6 @@ site_url: 'https://liminal-signal.github.io/'
 # | - https://www.mkdocs.org/user-guide/configuration/#copyright                                           |
 # |                                                                                                        |
 # +--------------------------------------------------------------------------------------------------------+
-copyright: |
-  &copy; Stevens
-
 # +--------------------------------------------------------------------------------------------------------+
 # |                                                                                                        |
 # | The base folder to use.                                                                                |
@@ -82,7 +79,6 @@ nav:
 # | - https://www.mkdocs.org/user-guide/configuration/#edit_uri                                            |
 # |                                                                                                        |
 # +--------------------------------------------------------------------------------------------------------+
-repo_name: Liminal-Signal
 repo_url: https://github.com/Liminal-Signal/
 
 edit_uri: tree/master/docs # Uncomment to define a different URI/URL for the "edit" option
