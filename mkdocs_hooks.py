@@ -9,6 +9,8 @@ BLOG_PREFIX = "blog/posts/"
 PUBLISH_KEY = "publish"
 CONTRIBUTOR_INFO_FILENAME = "author_info.md"
 CONTRIBUTORS_PLACEHOLDER = "<!-- CONTRIBUTORS_SECTION -->"
+AUTHOR_INFO_PLACEHOLDER = "<!-- AUTHOR_INFO_SECTION -->"
+AUTHOR_INFO_PAGE_SRC = "authors/index.md"
 
 
 def _read_front_matter(path: Path) -> dict:
@@ -90,8 +92,8 @@ def _collect_contributors(config, files) -> list[dict]:
 
     for info_path in sorted(posts_root.rglob(CONTRIBUTOR_INFO_FILENAME)):
         info_meta = _read_front_matter(info_path)
-        profile_src = info_path.relative_to(docs_dir).as_posix()
-        profile_url = file_url_by_src.get(profile_src, "")
+        if info_meta.get(PUBLISH_KEY) is not True:
+            continue
 
         published_posts: list[dict] = []
         for post_path in sorted(info_path.parent.glob("*.md")):
@@ -104,6 +106,7 @@ def _collect_contributors(config, files) -> list[dict]:
             post_url = file_url_by_src.get(post_src, "")
             if not post_url:
                 continue
+            post_url = "../" + post_url.lstrip("/")
             published_posts.append(
                 {
                     "title": str(post_meta.get("title") or post_path.stem.replace("_", " ")),
@@ -112,19 +115,17 @@ def _collect_contributors(config, files) -> list[dict]:
                 }
             )
 
-        if not published_posts:
-            continue
-
-        published_posts.sort(key=lambda post: post["date"], reverse=True)
-        latest_post = published_posts[0]
+        latest_post: dict | None = None
+        if published_posts:
+            published_posts.sort(key=lambda post: post["date"], reverse=True)
+            latest_post = published_posts[0]
 
         contributors.append(
             {
                 "name": str(info_meta.get("title") or info_path.parent.name),
                 "summary": _extract_summary(_read_markdown_body(info_path)),
-                "latest_title": latest_post["title"],
-                "latest_url": latest_post["url"],
-                "profile_url": profile_url if info_meta.get(PUBLISH_KEY) is True else "",
+                "latest_title": latest_post["title"] if latest_post else "",
+                "latest_url": latest_post["url"] if latest_post else "",
             }
         )
 
@@ -138,23 +139,26 @@ def _table_text(value: str) -> str:
 
 def _render_contributors_section(contributors: list[dict]) -> str:
     if not contributors:
-        return "_No contributors with `publish: true` posts yet._"
+        return "_No author profiles are marked with `publish: true` yet._"
 
     lines = [
-        "| Contributor | Details | Published |",
+        "| Contributor | Details | Latest Post |",
         "| --- | --- | --- |",
     ]
 
     for contributor in contributors:
         details = _table_text(contributor["summary"] or "Contributor profile")
 
-        links = [f"[{_table_text(contributor['latest_title'])}]({contributor['latest_url']})"]
-        if contributor["profile_url"]:
-            links.append(f"[Profile]({contributor['profile_url']})")
-        published_cell = "<br>".join(links)
+        if contributor["latest_url"]:
+            latest_post = (
+                f'<a href="{contributor["latest_url"]}">'
+                f'{_table_text(contributor["latest_title"])}</a>'
+            )
+        else:
+            latest_post = "_No published posts yet_"
 
         lines.append(
-            f"| **{_table_text(contributor['name'])}** | {details} | {published_cell} |"
+            f"| **{_table_text(contributor['name'])}** | {details} | {latest_post} |"
         )
 
     return "\n".join(lines)
@@ -167,6 +171,9 @@ def on_files(files, config):
             continue
         if not src_path.startswith(BLOG_PREFIX):
             continue
+        if src_path.endswith(f"/{CONTRIBUTOR_INFO_FILENAME}"):
+            file.inclusion = InclusionLevel.EXCLUDED
+            continue
 
         meta = _read_front_matter(Path(file.abs_src_path))
         if meta.get(PUBLISH_KEY) is True:
@@ -178,6 +185,11 @@ def on_files(files, config):
 
 
 def on_page_markdown(markdown, page, config, files):
+    if page.file.src_uri == AUTHOR_INFO_PAGE_SRC and AUTHOR_INFO_PLACEHOLDER in markdown:
+        contributors = _collect_contributors(config, files)
+        rendered = _render_contributors_section(contributors)
+        return markdown.replace(AUTHOR_INFO_PLACEHOLDER, rendered)
+
     if page.file.src_uri != "index.md":
         return markdown
     if CONTRIBUTORS_PLACEHOLDER not in markdown:
