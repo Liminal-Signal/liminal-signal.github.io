@@ -62,13 +62,6 @@ docs_dir: docs/
 hooks:
   - mkdocs_hooks.py
 
-nav:
-  - Home: index.md
-  - About: about.md
-  - Author Info: authors/index.md
-  - Blog: blog/index.md
-
-
 # +--------------------------------------------------------------------------------------------------------+
 # |                                                                                                        |
 # | These options allow to define a Repository to link to.                                                 |
@@ -263,10 +256,7 @@ theme:
   # |                                                                                                      |
   # +------------------------------------------------------------------------------------------------------+
   features:
-    - navigation.tabs
-    - navigation.sections
     - header.autohide
-    - navigation.expand
     - search.suggest
 
   # +------------------------------------------------------------------------------------------------------+
