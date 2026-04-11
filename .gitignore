@@ -22,3 +22,8 @@ venv/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Local tooling artifacts
+.tmp/
+.playwright-cli/
+output/playwright/
